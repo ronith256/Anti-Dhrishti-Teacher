@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AntiDhrishtiTeacher"
         tools:targetApi="31">
         <activity android:name=".BatchView" android:exported="true"/>
-        <activity android:name=".BatchSelectView" android:exported="true"/>
+        <activity android:name=".BatchSelectView" android:windowSoftInputMode="adjustNothing" android:exported="true"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true">

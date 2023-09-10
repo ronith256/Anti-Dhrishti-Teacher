@@ -1,5 +1,6 @@
 package com.lucario.antidhrishtiteacher;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -21,7 +22,7 @@ public class BatchViewAdapter extends RecyclerView.Adapter<BatchViewAdapter.Batc
     @NonNull
     @Override
     public BatchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View thisItemsView = View.inflate(parent.getContext(), R.layout.batch_view_items, null);
+        View thisItemsView = LayoutInflater.from(parent.getContext()).inflate(R.layout.batch_view_items, parent, false);
         return new BatchViewHolder(thisItemsView);
     }
 

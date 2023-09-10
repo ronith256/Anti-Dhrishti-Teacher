@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         if(isLoggedIn()){
             Intent intent = new Intent(LoginActivity.this, BatchView.class);
             startActivity(intent);
+            finish();
         }
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             requestPermissions(new String[] {Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
@@ -145,6 +146,7 @@ public class LoginActivity extends AppCompatActivity {
                 sharedPreferences.edit().putBoolean("isLoggedIn", true).apply();
                 Intent intent = new Intent(LoginActivity.this, BatchView.class);
                 startActivity(intent);
+                finish();
             } else {
                 showErrorDialog();
             }
